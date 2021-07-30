@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Package Tracker</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+  </head>  
+  <body>
+    <h3>Amazon/Fedex Package Tracker Using Custom Trained AutoML Object Detection Edge Model </h3>
+    
+    <section id="demos" class="invisible">
+
+      <p>Hold some packages in front of Webcam to detect</p>
+      
+      <div id="liveView" class="camView">
+        <div class="btnalign">
+          <button id="webcamButton">Enable Webcam</button>
+        </div>
+        <div class="vdoalign">
+          <video id="webcam" autoplay width="640" height="480"></video>
+        </div>
+          <!-- Screenshots : -->
+          <canvas  id="myCanvas" width="400" height="350"></canvas>  
+      </div>
+    </section>
+
+    <!-- Import TensorFlow.js library -->
+    <script src="https://unpkg.com/@tensorflow/tfjs" type="text/javascript"></script>
+
+    <!-- Load custome trained tarined VertexAI AutoML model -->
+    <script src="https://unpkg.com/@tensorflow/tfjs-automl"></script>
+
+
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script src="/script.js" defer></script>
+    
+    <!-- FireBase credentials -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-storage.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "Credential of your WebApp",
+    authDomain: "Credential of your WebApp",
+    projectId: "Credential of your WebApp",
+    storageBucket: "Credential of your WebApp",
+    messagingSenderId: "Credential of your WebApp",
+    appId: "Credential of your WebApp",
+    measurementId: "Credential of your WebApp"
+    // apiKey: "AIzaSyAw2YS999hSgGvnA6YDCCXllBuJxk6KUlk",
+    // authDomain: "package-tracker-5bb27.firebaseapp.com",
+    // projectId: "package-tracker-5bb27",
+    // storageBucket: "package-tracker-5bb27.appspot.com",
+    // messagingSenderId: "247338010162",
+    // appId: "1:247338010162:web:1cc387512ad835627e1e2b",
+    // measurementId: "G-M197ELPZQJ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+  </body>
+</html>
