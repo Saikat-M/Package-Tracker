@@ -2,7 +2,7 @@ const video = document.getElementById('webcam');
 const liveView = document.getElementById('liveView');
 const demosSection = document.getElementById('demos');
 const enableWebcamButton = document.getElementById('webcamButton');
-const SlackAPI = "https://hooks.slack.com/services/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"
+const SlackAPI = "Your Slack WebHook"
 //For Snapshot
 // Get the canvas and obtain a context for
 // drawing in it
