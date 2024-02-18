@@ -1,2 +1,2 @@
 # Package-Tracker
-Customer Trained AutoML Object Detection Edge Model to taring delivery packages
+Custom Trained AutoML Object Detection Model to track delivery packages.
